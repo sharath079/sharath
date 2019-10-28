@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ordered-list</title>
+
+<style type="text/css">
+/*list items styles  */
+li
+{
+text-transform: capitalize;
+font-family:sans-serif;
+font-weight: bolder;
+font-size:xx-large;
+}
+
+h2
+{
+text-transform:uppercase;
+font-family:sans-serif;
+font-weight: bolder;
+font-size:xx-large;
+padding-left: 80px;
+}
+
+/*first div --> circles headings  */
+.circles
+{
+float: left;
+}
+
+/*second div --> disc headings  */
+.disc
+{
+float: left;
+padding-left: 600px;
+}
+
+/*main-div CSS  */
+.main_div
+{
+ padding: 100px;
+ margin-left: 100px;
+}
+
+/*class for changing color of bullets in first-div  */
+.diff_color
+{
+list-style: none;
+}
+.diff_color::before 
+{
+  content: "\0036""\002E";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: blue; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.3em; /* Also needed for space (tweak if needed) */
+}
+
+li
+{
+padding: 5px;
+}
+/*class for changing color of bullets in second-div  */
+.diff_color1
+{
+list-style: none;
+}
+.diff_color1::before 
+{
+  content:"\25A0";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: blue; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+u
+{
+color: blue;
+}
+
+</style>
+</head>
+<body>
+<!--outer div  -->
+<div class="main_div">
+<!--first div  -->
+<div class="circles">
+<h2>ol</h2>
+<ol type="1">
+ <li>sreenivas</li>
+ <li>rajesh</li>
+ <li>naresh</li>
+ <li>rakesh</li>
+ <li>suresh</li>
+ <li class="diff_color"><u>somesh</u></li>
+ <li>mahesh</li>
+</ol>
+</div>
+<!--first div end  -->
+
+<!--second div  -->
+<div class="disc">
+<h2>ul</h2>
+<ul type="square">
+ <li>sreenivas</li>
+ <li>rajesh</li>
+ <li>naresh</li>
+ <li>rakesh</li>
+ <li>suresh</li>
+ <li class="diff_color1"><u>somesh</u></li>
+ <li>mahesh</li>
+</ul>
+</div>
+<!--second div end  -->
+</div>
+</body>
+</html>
